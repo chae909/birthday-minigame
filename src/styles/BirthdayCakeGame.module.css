@@ -1,0 +1,94 @@
+.cakeGameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffe0b2;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cakeGameContainer h2 {
+    color: #d84315;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.cakeDisplay {
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    border: 5px solid #ffcc80;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cakeImage {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* 각 단계별 이미지 변화 애니메이션 (선택 사항) */
+.cakeImage[src$="cake_step0.png"] { transform: scale(0.7); }
+.cakeImage[src$="cake_step1.png"] { transform: scale(0.8); }
+.cakeImage[src$="cake_step2.png"] { transform: scale(0.9); }
+.cakeImage[src$="cake_step3.png"] { transform: scale(0.95); }
+.cakeImage[src$="cake_step4.png"] { transform: scale(1.0); }
+.cakeImage[src$="cake_step5.png"] { transform: scale(1.05); }
+
+
+.ingredientButtons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ingredientButton {
+    background-color: #ff8a65;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ingredientButton:hover:not(:disabled) {
+    background-color: #ff5722;
+    transform: translateY(-3px);
+}
+
+.ingredientButton:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.ingredientButton.completed {
+    background-color: #aed581; /* 완료된 버튼 색상 */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #4CAF50;
+    font-weight: bold;
+    animation: bounceIn 0.8s forwards;
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    50% { transform: scale(1.2); opacity: 1; }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}

@@ -1,0 +1,18 @@
+.particle {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none; /* 마우스 이벤트 무시 */
+    z-index: 9999; /* 다른 요소 위에 표시 */
+    animation: fadeOutScale 1s forwards; /* JavaScript에서 동적으로 설정 */
+}
+
+@keyframes fadeOutScale {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
