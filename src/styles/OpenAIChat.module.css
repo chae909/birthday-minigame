@@ -1,0 +1,70 @@
+.container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Added a light background */
+}
+
+.inputGroup {
+  margin-bottom: 15px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input {
+  width: 100%;
+  padding: 10px; /* Increased padding */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.textarea { /* Specific style for textarea if needed, merged with input for now */
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  min-height: 70px;
+}
+
+.button {
+  padding: 10px 20px; /* Increased padding */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Added transition */
+}
+
+.button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.responseArea {
+  margin-top: 20px;
+  padding: 15px; /* Increased padding */
+  border: 1px solid #eee;
+  border-radius: 4px;
+  background-color: #ffffff; /* White background for response */
+  min-height: 60px;
+  white-space: pre-wrap;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+  font-weight: bold; /* Made error bold */
+}
