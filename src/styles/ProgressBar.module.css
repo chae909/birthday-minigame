@@ -25,3 +25,41 @@
     font-weight: bold;
     font-size: 0.9em;
 }
+
+/* Tablet Styles (optional, if changes are very subtle, could merge with mobile) */
+@media (max-width: 1023px) { /* Covers tablets and mobile */
+  .progressBarContainer {
+    height: 22px;
+    margin-bottom: 30px;
+    width: 85%; /* Slightly wider for tablets */
+  }
+  .progressText {
+    line-height: 22px;
+    font-size: 0.85em;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .progressBarContainer {
+    width: 90%; /* More width for mobile */
+    height: 20px;
+    margin-bottom: 25px;
+  }
+  .progressText {
+    line-height: 20px; /* Match container height */
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 480px) { /* Smaller mobile screens */
+  .progressBarContainer {
+    width: 95%; /* Even more width */
+    height: 18px;
+    margin-bottom: 20px;
+  }
+  .progressText {
+    line-height: 18px;
+    font-size: 0.75em;
+  }
+}

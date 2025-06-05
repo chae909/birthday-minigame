@@ -27,7 +27,8 @@ const OpenAIGuide = () => {
     setGuidance(`스테이지 ${currentStage}에 대한 가이드를 생성 중입니다...`);
 
     try {
-      const prompt = gamePrompt || `현재 게임 스테이지 ${currentStage}에 대한 규칙이나 힌트를 설명해줘.`; // Default prompt using currentStage
+      // Default prompt in fetchGuidanceForContext updated for tone
+      const prompt = gamePrompt || `현재 게임 스테이지 ${currentStage}에 대한 규칙이나 힌트를 아주 친절하고 상냥한 말투로 설명해줄래?`;
 
       const completion = await openai.chat.completions.create({
         messages: [{ role: 'user', content: prompt }],
@@ -49,13 +50,13 @@ const OpenAIGuide = () => {
       let stageSpecificPrompt = "";
       switch (currentStage) {
         case 1:
-          stageSpecificPrompt = "생일 케이크 만들기 게임의 규칙과 첫 번째 힌트를 알려줘."; // "Tell me the rules and a first hint for the Birthday Cake Making game."
+          stageSpecificPrompt = "생일 케이크 만들기 게임의 규칙과 첫 번째 힌트를 친절하고 부드러운 말투로 알려줄래? 어린아이에게 설명하듯이 상냥하게 부탁해.";
           break;
         case 2:
-          stageSpecificPrompt = "선물 찾기 게임의 규칙과 첫 번째 힌트를 알려줘."; // "Tell me the rules and a first hint for the Gift Hunt game."
+          stageSpecificPrompt = "선물 찾기 게임의 규칙과 첫 번째 힌트를 친절하고 상냥한 어투로 설명해주면 좋겠어. 내가 잘 이해할 수 있도록 부드럽게 말해줘.";
           break;
         default:
-          stageSpecificPrompt = `현재 게임 스테이지 ${currentStage}에 대한 일반적인 설명을 해줘.`; // "Provide a general description for the current game stage ${currentStage}."
+          stageSpecificPrompt = `현재 게임 스테이지 ${currentStage}에 대한 일반적인 설명을 친절하고 이해하기 쉽게, 부드러운 말투로 해줄 수 있을까?`;
       }
       fetchGuidanceForContext(stageSpecificPrompt);
     } else {

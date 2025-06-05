@@ -22,3 +22,16 @@ body {
 button {
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  body {
+    /* Optional: Adjust base font size if text is too large */
+    /* font-size: 14px; */
+    align-items: flex-start; /* Allow content to start from top if it overflows */
+  }
+
+  #root {
+    align-items: flex-start; /* Allow content to start from top */
+    padding-top: 20px; /* Add some padding at the top for mobile */
+  }
+}

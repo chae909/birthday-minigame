@@ -108,3 +108,87 @@
     background: white;
     /* 흐림 효과 없음! */
 }
+
+@media (min-width: 768px) and (max-width: 1023px) { /* Tablet specific */
+  .giftHuntContainer {
+    padding: 25px;
+  }
+  .giftHuntContainer h2 {
+    font-size: 1.9em;
+  }
+  .giftHuntContainer p {
+    font-size: 1.05em;
+  }
+  .gameArea {
+    height: 380px;
+  }
+  .giftBox {
+    width: 70px;
+    height: 70px;
+  }
+  .foundText {
+     font-size: 2.7em;
+  }
+  .openedGiftImage {
+     max-width: 340px;
+  }
+}
+
+@media (max-width: 767px) { /* Adjusted for no overlap with tablet query */
+  .giftHuntContainer {
+    padding: 20px;
+    min-height: auto; /* Adjust min-height */
+  }
+  .giftHuntContainer h2 {
+    font-size: 1.8em;
+  }
+  .giftHuntContainer p {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+  .gameArea {
+    height: 350px; /* Adjust height */
+  }
+  .giftBox {
+    width: 65px;
+    height: 65px;
+  }
+  .foundText {
+     font-size: 2.5em;
+  }
+  .openedGiftImage {
+     width: 90%;
+     max-width: 320px;
+  }
+}
+
+@media (max-width: 480px) { /* For smaller mobile phones */
+  .giftHuntContainer {
+    padding: 15px;
+  }
+  .giftHuntContainer h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+   .giftHuntContainer p {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+  }
+  .gameArea {
+    height: 300px; /* Further adjust height */
+    border-width: 2px;
+  }
+  .giftBox {
+    width: 50px;
+    height: 50px;
+  }
+  .foundText {
+     font-size: 2em;
+  }
+  .openedGiftImage {
+     max-width: 280px;
+  }
+  .foundStatus {
+     font-size: 1.1em;
+  }
+}

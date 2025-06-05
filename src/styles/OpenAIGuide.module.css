@@ -68,3 +68,52 @@
   margin-top: 10px;
   font-weight: bold; /* Made error bold */
 }
+
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    padding: 18px;
+    margin: 15px auto; /* auto for horizontal centering if container has a max-width */
+    max-width: 90%; /* Example: constrain width a bit */
+  }
+  .container h4 { /* Assuming h4 is a direct child or styled globally within this scope */
+    font-size: 1.15em;
+  }
+  .responseArea {
+    padding: 12px;
+    font-size: 0.95em; /* Adjust text size in response area */
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .container {
+    margin: 10px; /* Reduced margin for mobile */
+    padding: 12px; /* Reduced padding for mobile */
+  }
+  .container h4 { /* Assuming h4 is a direct child or styled globally within this scope */
+    font-size: 1.1em;
+    margin-bottom: 10px;
+  }
+  .responseArea {
+    padding: 10px;
+    font-size: 0.9em; /* Smaller text for mobile */
+    min-height: 50px;
+  }
+  .error {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) { /* Even smaller mobile screens */
+  .container {
+    margin: 5px;
+    padding: 10px;
+  }
+  .container h4 { /* Assuming h4 is a direct child or styled globally within this scope */
+    font-size: 1em;
+  }
+  .responseArea {
+    font-size: 0.85em;
+  }
+}

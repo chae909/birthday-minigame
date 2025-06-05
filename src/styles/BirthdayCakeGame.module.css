@@ -92,3 +92,73 @@
     70% { transform: scale(0.9); }
     100% { transform: scale(1); }
 }
+
+@media (min-width: 768px) and (max-width: 1023px) { /* Tablet specific */
+  .cakeGameContainer {
+    padding: 25px;
+  }
+  .cakeGameContainer h2 {
+    font-size: 1.9em;
+  }
+  .cakeDisplay {
+    width: 260px;
+    height: 260px;
+    margin-bottom: 35px;
+  }
+  .ingredientButton {
+    padding: 11px 22px;
+    font-size: 1.05em;
+  }
+  .message {
+    font-size: 1.15em;
+  }
+}
+
+@media (max-width: 767px) { /* Adjusted for no overlap with tablet query */
+  .cakeGameContainer {
+    padding: 20px;
+    margin: 10px; /* Add some margin if it's inside a tighter global layout */
+  }
+  .cakeGameContainer h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+  .cakeDisplay {
+    width: 220px; /* Smaller fixed size for tablet */
+    height: 220px;
+    margin-bottom: 30px;
+  }
+  .ingredientButton {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+  .message {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 480px) { /* For smaller mobile phones */
+  .cakeGameContainer {
+    padding: 15px;
+  }
+  .cakeGameContainer h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  .cakeDisplay {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 20px;
+    border-width: 3px;
+  }
+  .ingredientButtons {
+     gap: 10px;
+  }
+  .ingredientButton {
+    padding: 8px 15px;
+    font-size: 0.9em;
+  }
+  .message {
+    font-size: 1em;
+  }
+}
