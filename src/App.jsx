@@ -4,7 +4,7 @@ import BirthdayCakeGame from './games/BirthdayCakeGame';
 import GiftHuntGame from './games/GiftHuntGame';
 import ProgressBar from './components/ProgressBar';
 import ParticleEffect from './components/ParticleEffect';
-import OpenAIChat from './components/OpenAIChat'; // Added import
+import OpenAIGuide from './components/OpenAIGuide'; // Updated import
 import styles from './styles/App.module.css';
 
 const GameContainer = () => {
@@ -36,12 +36,12 @@ const GameContainer = () => {
 
 function App() {
     return (
-        <> {/* Use a fragment to return multiple top-level elements */}
-            <GameProvider>
+        <GameProvider>
+            <>
                 <GameContainer />
-            </GameProvider>
-            <OpenAIChat /> {/* Added OpenAIChat component */}
-        </>
+                <OpenAIGuide />
+            </>
+        </GameProvider>
     );
 }
 

@@ -68,6 +68,16 @@ src/
 - **ProgressBar.jsx, ParticleEffect.jsx**  
   진행도 표시와 파티클 애니메이션을 담당합니다.
 
+## Environment Variables
+This project uses environment variables for configuration. Create a `.env` file in the root of the project and add the following variable:
+
+```
+VITE_OPENAI_API_KEY=your_openai_api_key_here
+```
+
+Replace `your_openai_api_key_here` with your actual OpenAI API key.
+Refer to `.env.example` for a template.
+
 ## 실행 방법
 
 1. 저장소를 클론합니다.
